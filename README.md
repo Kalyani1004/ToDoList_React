@@ -90,7 +90,4 @@ To push this project to your GitHub repository:
    git branch -M main
    git push -u origin main
    ```
-## Future Enhancements 
-- Add drag-and-drop support for task reordering.
-- Implement task categories and priorities.
-- Add reminders/notifications.
+
