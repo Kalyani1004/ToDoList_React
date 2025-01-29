@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon, FaPlus } from 'react-icons/fa'; // Import Sun, Moon, and Plus icons
+import { FaSun, FaMoon, FaPlus } from 'react-icons/fa'; 
 import './App.css';
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
     });
     const [editingTaskId, setEditingTaskId] = useState(null);
 
-    // Dark Mode State
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
@@ -114,7 +113,6 @@ function App() {
         setIsDarkMode(!isDarkMode);
     };
 
-    // Group tasks by date
     const groupedTasks = tasks.reduce((groups, task) => {
         const date = task.date;
         if (!groups[date]) {
@@ -142,7 +140,7 @@ function App() {
     <div className="modal-backdrop" onClick={handleCancelTask}>
         <div
             className="card p-3 mb-3 custom-card"
-            onClick={(e) => e.stopPropagation()} // Prevent closing the modal when clicking inside
+            onClick={(e) => e.stopPropagation()} 
         >
             <h2>{editingTaskId ? 'Edit Task' : 'Add New Task'}</h2>
             <input
@@ -230,7 +228,7 @@ function App() {
                     </div>
                 ))}
 
-            {/* Floating Add Task Button */}
+            
             <div
                 className="position-fixed bottom-0 end-0 m-4"
                 style={{ zIndex: 1000 }}
