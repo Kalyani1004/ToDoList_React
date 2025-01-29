@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container {
+  background-color: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.task-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background: #bbc1c7;
+  text-align: center;
+}
+
+.task-card.dark-mode {
+  background: #333;
+  border-color: #444;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-buttons button {
+  margin-right: 5px;
+}
+
+.floating-add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.floating-add-button:hover {
+  background-color: #0056b3;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
+.sun-icon {
+  color: white;
+}
+
+.mode-toggle.dark-mode {
+  color: #fff;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-content.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+.custom-card{
+  width: 350px; 
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-card.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.custom-card .form-control {
+  margin-bottom: 10px;
+}
+
+.card-tasks{
+  width:50%
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust columns */
+  gap: 20px;
+  margin-top: 20px;width: 30%;
+}
+
+.task-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Button Styling for Icons */
+.btn-info, .btn-danger, .btn-success {
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
